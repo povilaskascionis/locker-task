@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "outDir": "./dist",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es5",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["./src/index.tsx"]
+}
