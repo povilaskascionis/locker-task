@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import { useAppSelector } from './store/hooks'
 import { Navigate, Route, Routes } from 'react-router-dom'
+import LoginScreen from './features/authorization/screens/LoginScreen'
 
 export enum Path {
   HOME = '/',
@@ -20,7 +21,7 @@ const ProtectedRoute = ({ children }: { children: ReactNode }) => {
 
 const Router = () => (
   <Routes>
-    <Route index element={'HOME'} />
+    <Route index element={<LoginScreen />} />
     <Route
       path={Path.SERVERS}
       element={<ProtectedRoute>SeRvERs</ProtectedRoute>}

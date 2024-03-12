@@ -1,7 +1,9 @@
 @import '../../styles/variables';
 
 .layout {
-  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-image: url('../../assets/images/background-nasa-unsplash.webp');
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,7 +14,8 @@
 }
 
 .navigation {
-  padding: $space2 $space3;
+  position: fixed;
+  top: $space2;
 }
 
 .homeLink {
@@ -21,5 +24,10 @@
 }
 
 .content {
+  align-self: center;
+  justify-content: center;
+  width: 100%;
   max-width: $maxContentWidth;
+  background-color: $white;
+  border-radius: 10px;
 }

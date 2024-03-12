@@ -1,0 +1,22 @@
+@import '../../styles//variables';
+
+.button {
+  height: 52px;
+  padding: $space1 $space2;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: $accent;
+  border-radius: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  color: $white;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.disabled {
+  background-color: rgba($accent, 0.7);
+  cursor: not-allowed;
+}
