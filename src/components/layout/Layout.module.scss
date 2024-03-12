@@ -14,13 +14,19 @@
 }
 
 .navigation {
+  padding: $space2;
+  width: calc(100%);
   position: fixed;
-  top: $space2;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: $black;
 }
 
 .homeLink {
   color: $white;
   font-size: 24px;
+  margin-right: auto;
 }
 
 .content {

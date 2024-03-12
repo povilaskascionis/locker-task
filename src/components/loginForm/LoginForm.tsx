@@ -3,7 +3,7 @@ import { FC, useState } from 'react'
 
 import Button from '@/components/button/Button'
 
-import FormTextInput from './FormTextInput'
+import FormTextInput from '../inputs/FormTextInput'
 
 import styles from './LoginForm.module.scss'
 
