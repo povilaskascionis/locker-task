@@ -55,6 +55,14 @@
     opacity: 1;
     transition: opacity 0.3s;
     padding: $space5 $space4;
+
+    & > a {
+      display: block;
+      margin-bottom: $space3;
+      color: $white;
+      text-decoration: none;
+      font-size: 16px;
+    }
   }
 
   .burger {

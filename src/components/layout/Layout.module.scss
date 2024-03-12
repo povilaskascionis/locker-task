@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+@import '../../styles/screenSizes';
 
 .layout {
   display: flex;
@@ -21,6 +22,22 @@
   left: 0;
   display: flex;
   background-color: $black;
+}
+
+.navbarLinks {
+  display: flex;
+  align-items: center;
+
+  & > a {
+    color: $white;
+    text-decoration: none;
+    margin-left: $space3;
+    font-size: 16px;
+  }
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .homeLink {
