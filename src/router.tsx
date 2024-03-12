@@ -4,6 +4,7 @@ import { Link, Navigate, Route, Routes } from 'react-router-dom'
 import LoginScreen from './features/authorization/screens/LoginScreen'
 import LogoutScreen from './features/authorization/screens/LogoutScreen'
 import MainScreen from './features/authorization/screens/MainScreen'
+import ServersScreen from './features/servers/ServersScreen'
 
 export enum RouterPath {
   HOME = '/',
@@ -50,7 +51,11 @@ const Router = () => (
     <Route path={RouterPath.LOGIN} element={<LoginScreen />} />
     <Route
       path={RouterPath.SERVERS}
-      element={<ProtectedRoute>SeRvERs</ProtectedRoute>}
+      element={
+        <ProtectedRoute>
+          <ServersScreen />
+        </ProtectedRoute>
+      }
     />
     <Route path={RouterPath.LOGOUT} element={<LogoutScreen />} />
     <Route path="/*" element={<Navigate to={RouterPath.HOME} />} />
