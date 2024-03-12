@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { AUTH_TOKEN_STORAGE_KEY } from '@/features/authorization/constants'
 
 import { BASE_API_URL } from './constants'
-import { LoginFormData, LoginResponse, Servers } from './types'
+import { LoginFormData, LoginResponse, Server } from './types'
 
 export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: BASE_API_URL }),
@@ -15,7 +15,7 @@ export const apiSlice = createApi({
         body: credentials,
       }),
     }),
-    getServers: builder.query<Servers, void>({
+    getServers: builder.query<Server[], void>({
       query: () => ({
         url: '/servers',
         headers: {

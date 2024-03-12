@@ -7,7 +7,7 @@ export type LoginResponse = {
   token: string
 }
 
-export type Servers = {
+export type Server = {
   name: string
   distance: number
-}[]
+}

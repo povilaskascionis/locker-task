@@ -14,6 +14,7 @@ type Props = {
 
 const Button: FC<Props> = ({
   children,
+  onClick,
   type = 'button',
   disabled,
   loading,
@@ -21,7 +22,7 @@ const Button: FC<Props> = ({
   const className = classNames(styles.button, disabled && styles.disabled)
 
   return (
-    <button type={type} className={className}>
+    <button onClick={onClick} type={type} className={className}>
       {loading ? <Spinner /> : children}
     </button>
   )

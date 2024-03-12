@@ -6,6 +6,7 @@ import { authorizationSlice } from '../authorizationSlice'
 
 const LogoutScreen = () => {
   const dispatch = useAppDispatch()
+
   dispatch(authorizationSlice.actions.setUnauthorized())
 
   return <Navigate to={RouterPath.LOGIN} />
