@@ -5,7 +5,7 @@
   "author": "Povilas",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --mode development",
+    "start": "webpack serve --mode development --stats-error-details",
     "build": "webpack --mode production"
   },
   "devDependencies": {
@@ -13,7 +13,10 @@
     "@types/react-dom": "^18.2.21",
     "css-loader": "^6.10.0",
     "html-webpack-plugin": "^5.6.0",
+    "sass": "^1.71.1",
+    "sass-loader": "^14.1.1",
     "source-map-loader": "^5.0.0",
+    "style-loader": "^3.3.4",
     "ts-loader": "^9.5.1",
     "typescript": "^5.4.2",
     "webpack": "^5.90.3",
@@ -21,7 +24,10 @@
     "webpack-dev-server": "^5.0.2"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
+    "react-router-dom": "^6.22.3"
   }
 }

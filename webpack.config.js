@@ -20,7 +20,7 @@ module.exports = {
     filename: 'bundle.[contenthash].js',
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
+    extensions: ['.ts', '.tsx', '.js', '.scss'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
@@ -41,8 +41,38 @@ module.exports = {
         use: ['@svgr/webpack'],
       },
       {
-        test: /\.css$/,
-        loader: 'css-loader',
+        test: /\.scss$/i,
+        exclude: /\.module\.scss$/i,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: {
+                mode: 'icss',
+              },
+            },
+          },
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.module\.scss$/i,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: {
+                mode: 'local',
+                localIdentName: '[name]__[local]--[hash:base64:5]',
+              },
+            },
+          },
+          'sass-loader',
+        ],
       },
     ],
   },

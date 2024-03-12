@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+
+.layout {
+  position: fixed;
+  background-image: url('../../assets/images/background-nasa-unsplash.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  padding: $space2;
+}
+
+.navigation {
+  padding: $space2 $space3;
+}
+
+.homeLink {
+  color: $white;
+  font-size: 24px;
+}
+
+.content {
+  max-width: $maxContentWidth;
+}
