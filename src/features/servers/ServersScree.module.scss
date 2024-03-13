@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+
+.table {
+  position: relative;
+  border-spacing: 0;
+
+  table-layout: fixed;
+  width: 100%;
+}
+
+.tableHead {
+  background-color: $accent;
+  color: $white;
+  position: sticky;
+  top: 0;
+}
+
+.headerCell {
+  padding: $space2;
+}
+
+.tableCell {
+  padding: $space1 $space3;
+  text-align: center;
+  font-size: 16px;
+}
