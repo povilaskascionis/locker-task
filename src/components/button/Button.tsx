@@ -1,12 +1,12 @@
 import classNames from 'classnames'
-import { FC, ReactNode } from 'react'
+import { FC, MouseEventHandler, ReactNode } from 'react'
 
 import styles from './Button.module.scss'
 import Spinner from '../spinner/Spinner'
 
 type Props = {
   children: ReactNode
-  onClick: () => void
+  onClick: MouseEventHandler<HTMLButtonElement>
   type?: HTMLButtonElement['type']
   disabled?: boolean
   loading?: boolean

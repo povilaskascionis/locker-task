@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --mode development --stats-error-details",
-    "build": "webpack --mode production"
+    "build": "rm -rf dist/ && webpack --mode production"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",

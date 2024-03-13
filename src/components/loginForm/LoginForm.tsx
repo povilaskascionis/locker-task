@@ -1,5 +1,5 @@
 import { LoginFormData } from '@/features/api/types'
-import { FC, useState } from 'react'
+import { FC, useState, MouseEvent } from 'react'
 
 import Button from '@/components/button/Button'
 
@@ -17,7 +17,9 @@ const LoginForm: FC<Props> = ({ onSubmit }) => {
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState(false)
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (event: MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault()
+
     setError('')
     setSubmitting(true)
 
@@ -51,7 +53,7 @@ const LoginForm: FC<Props> = ({ onSubmit }) => {
         onClick={handleSubmit}
         disabled={!username || !password}
         loading={submitting}
-        type="button"
+        type="submit"
       >
         Log In
       </Button>
